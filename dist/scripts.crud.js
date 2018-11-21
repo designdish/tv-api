@@ -1,7 +1,8 @@
+var $ = jQuery;
+
 function pad(n) {
 	return n < 10 ? "0" + n : n;
 }
-
 var time = {};
 
 time.now = new Date();
@@ -250,14 +251,8 @@ var createRow = function(campaign, source, medium, content) {
 
 window.onload = function(){
 	var id = getValue("tvr_id");
-	// if(tvr_id){
 
-	// }else{
-	// 	editRow();
-	// }
 	createRow(123, "bowie", "testing", "thiscontent");
-
-
 };
 
 
