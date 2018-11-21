@@ -1,0 +1,1 @@
+window.onload = createRow(123, 'bowie', 'testing', 'thiscontent');

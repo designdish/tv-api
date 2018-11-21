@@ -1,0 +1,22 @@
+<script id="dataTable" type="text/x-handlebars-template">
+	<table>
+		{{#each this}}
+			<tr>
+				<td>{{_id.$oid}}</td>
+				<td>{{utm_campaign}}</td>
+				<td>{{utm_source}}</td>
+				<td>{{utm_medium}}</td>
+				<td>{{utm_content}}</td>
+				<td>{{datetime}}</td>
+				<td>{{referral_ad}}</td>
+				<td>{{sale_price}}</td>
+				<td>{{qty}}</td>
+				<td>{{discount}}</td>
+				<td>{{tax}}</td>
+				<td>{{currency}}</td>
+				<td><i class="far fa-trash-alt" onclick="deleteRow('{{_id.$oid}}');"></i></td>
+				<td><i class="fas fa-pen"></i></td>
+			</tr>
+		{{/each}}
+	</table>
+</script>
