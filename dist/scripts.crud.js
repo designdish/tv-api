@@ -1,6 +1,5 @@
-//testing cdn refresh
 function pad(n) {
-	return n < 11 ? "0" + n : n;
+	return n < 10 ? "0" + n : n;
 }
 
 var time = {};
