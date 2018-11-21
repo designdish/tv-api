@@ -176,7 +176,12 @@ var deleteRow = function(id) {
 		type: "DELETE",
 		async: true,
 		timeout: 300000,
-		success: function(data) {},
+		success: function(data) {
+			var tr = document.querySelector('[data-row="' + id + '"]');
+			if (tr){
+				tr.parentNode.removeChild(tr);
+			}
+		},
 		error: function(xhr, status, err) {}
 	});
 };
@@ -250,9 +255,12 @@ var createRow = function(campaign, source, medium, content) {
 
 
 window.onload = function(){
-	var id = getValue("tvr_id");
-
-	createRow(123, "bowie", "testing", "thiscontent");
+	var id = (getValue("tvr_id") === "") ? getDBValue('id') : getValue("tvr_id");
+	if (!id){
+		createRow(123, "bowie", "testing", "thiscontent");
+	}else{
+		findUser(id);
+	}
 };
 
 

@@ -8,7 +8,7 @@ const MongoClient = require('mongodb').MongoClient;
 const bodyParser = require('body-parser');
 const app = express();
 const db = require('./config/db');
-const port = 8000;
+const port = 8080;
 
 
 hbs.getPartials().then(function(partials){

@@ -1,7 +1,7 @@
 <script id="dataTable" type="text/x-handlebars-template">
 	<table>
 		{{#each this}}
-			<tr>
+			<tr data-row={{_id.$oid}}>
 				<td>{{_id.$oid}}</td>
 				<td>{{utm_campaign}}</td>
 				<td>{{utm_source}}</td>
